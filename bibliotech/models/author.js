@@ -8,19 +8,19 @@ const authorSchema = new mongoose.Schema({
 nationality:{ type: String, required: false, trim: true,
     minLength:2,
     maxLength: 40,
-    unique: true },
+    },
 
 birthYear:{ type : Number, required: false, trim: true,
 min:0,
 max:2026
 },
 
-active:{ type: Boolean, default:}
+active:{ type: Boolean, default:true}
 }, {
   timestamps:true,
   versionKey:false
 }
 );
-export default mongoose.model('Producto', productoSchema);
+export default mongoose.model('author', authorSchema);
 
 
